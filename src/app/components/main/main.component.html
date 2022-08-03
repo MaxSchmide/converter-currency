@@ -1,0 +1,50 @@
+<div class="container h-full mx-auto">
+  <div
+    class="mx-auto w-1/2 mt-20 py-20 border rounded flex flex-row justify-around"
+  >
+    <div class="flex flex-col gap-10">
+      <select
+        #primarySelect
+        (input)="
+          selectHandler($event, primarySelect.value, secondarySelect.value)
+        "
+        class="outline-none shadow-md px-5 py-3"
+      >
+        <option value="840">Dollar USD</option>
+        <option value="978">Euro EUR</option>
+        <option value="980">Hryvnia UAH</option>
+      </select>
+      <input
+        [(ngModel)]="primaryInput"
+        class="outline-none bg-gray-200 text-lg border-b-2 border-b-black px-5 py-3"
+        type="number"
+        name="primary"
+        (input)="
+          inputHandler($event, primarySelect.value, secondarySelect.value)
+        "
+      />
+    </div>
+    <div class="flex flex-col gap-10">
+      <select
+        #secondarySelect
+        (input)="
+          selectHandler($event, primarySelect.value, secondarySelect.value)
+        "
+        class="outline-none shadow-md px-5 py-3"
+      >
+        <option value="980">Hryvnia UAH</option>
+        <option value="840">Dollar USD</option>
+        <option value="978">Euro EUR</option>
+      </select>
+
+      <input
+        [(ngModel)]="secondaryInput"
+        (input)="
+          inputHandler($event, primarySelect.value, secondarySelect.value)
+        "
+        class="outline-none text-lg bg-gray-200 border-b-2 border-b-black px-5 py-3"
+        type="number"
+      />
+    </div>
+  </div>
+</div>

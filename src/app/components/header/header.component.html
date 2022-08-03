@@ -1,0 +1,21 @@
+<nav
+  class="h-16 text-center text-white px-10 bg-slate-800 flex items-center justify-between"
+>
+  <h1 class="font-bold text-center text-xl">{{ title | titlecase }}</h1>
+  <div class="flex gap-6">
+    <div class="flex items-center gap-1">
+      <div><img src="assets/images/eu.png " alt="eu" /></div>
+      <div class="flex-col flex">
+        <span><b>B:</b> {{ rate[1].rateBuy | number: "2.2-2" }} UAH</span>
+        <span><b>S:</b> {{ rate[1].rateSell | number: "2.2-2" }} UAH</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-1">
+      <div><img src="assets/images/usa.png " alt="eu" /></div>
+      <div class="flex-col flex">
+        <span><b>B:</b> {{ rate[0].rateBuy | number: "2.2-2" }} UAH</span>
+        <span><b>S:</b> {{ rate[0].rateSell | number: "2.2-2" }} UAH</span>
+      </div>
+    </div>
+  </div>
+</nav>

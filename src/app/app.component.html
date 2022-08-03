@@ -1,0 +1,8 @@
+<app-error></app-error>
+<div *ngIf="!loading">
+  <app-header [rate]="rate"></app-header>
+  <app-main [rate]="rate"> </app-main>
+</div>
+<div *ngIf="loading">
+  <h1 class="text-lg text-center mt-10">Loading...</h1>
+</div>
